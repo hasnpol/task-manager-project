@@ -1,0 +1,60 @@
+/* styles.css */
+.App {
+  font-family: sans-serif;
+  text-align: left;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#title {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#task_title {
+  text-align: center;
+  margin-top: 10px;
+  width: 20%;
+}
+
+img {
+  margin-top: 30px;
+  width: 120px;
+  height: 120px;
+}
+
+.TaskFormContainer {
+  margin-top: 20px;
+}
+
+ListGroupItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.completedTask {
+  text-decoration: line-through;
+}
+
+.Collapse {
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.collapsing {
+  height: 0 !important;
+  overflow: hidden;
+}
