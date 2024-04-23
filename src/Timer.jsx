@@ -13,19 +13,23 @@ const Timer = () => {
   useEffect(() => {
     let interval;
 
-    if (isRunning) {
+   if (isRunning) {
       interval = setInterval(() => {
-        setSeconds((prevSeconds) => prevSeconds + 1);
+        setSeconds((prevSeconds) => {
+          const newSeconds = prevSeconds + 1;
 
-        if (seconds === 59) {
-          setSeconds(0);
-          setMinutes((prevMinutes) => prevMinutes + 1);
+          if (newSeconds === 60) {
+            setSeconds(0);
+            setMinutes((prevMinutes) => prevMinutes + 1);
 
-          if (minutes === 59) {
-            setMinutes(0);
-            setHours((prevHours) => prevHours + 1);
+            if (minutes === 59) {
+              setMinutes(0);
+              setHours((prevHours) => prevHours + 1);
+            }
           }
-        }
+
+          return newSeconds;
+        });
       }, 1000); // set this to '1' to test functionality of Total Hours in Pay-Period.
     }
 
