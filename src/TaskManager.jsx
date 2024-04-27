@@ -48,6 +48,8 @@ export default function TaskManager() {
               className={task.completed ? "completedTask" : ""}
             >
               <div>
+                <strong>Project Owner: </strong>
+                {task.ownerName},
                 <strong>Project Name: </strong>
                 {task.projectName}, <strong>Due Date: </strong>
                 {task.dateDue}
