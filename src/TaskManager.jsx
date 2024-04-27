@@ -50,9 +50,9 @@ export default function TaskManager() {
               <div>
                 <strong>Project Owner: </strong>
                 {task.ownerName}       
-                <strong>Project Name: </strong>
+                <strong>    Project Name: </strong>
                 {task.projectName}     
-                <strong>Due Date: </strong>
+                <strong>    Due Date: </strong>
                 {task.dateDue}
               </div>
               <div>
